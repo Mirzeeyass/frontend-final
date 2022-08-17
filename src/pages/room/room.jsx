@@ -56,7 +56,7 @@ class Room extends React.Component {
       syncSetup: false,
       profile: {},
       profiles: [],
-      logs: [{ content: 'Welcome to CodeInterview!' }],
+      logs: [{ content: 'Welcome to Coderview!' }],
     };
   }
 
