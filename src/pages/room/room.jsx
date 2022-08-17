@@ -34,7 +34,7 @@ function isCamOn() {
 
 function displayWelcomeToast(name) {
   toast.dark(
-    `Welcome to CodeInterview, ${name}! Share this room's URL to let others join in.`
+    `Welcome to Abdullah's Coderview, ${name}! Share this room's URL to let others join in.`
   );
 }
 
