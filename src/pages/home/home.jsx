@@ -21,10 +21,10 @@ const name = urlParams.get('name');
 const Home = () => {
   const roomService = getRoomService();
   let clicked = false;
-  toast.info(
-    `Hi! I'm currently hosting the backend for this site on Heroku and AWS free tiers so you might experience some failed requests and errors from time to time due to max connection limits. Sorry for being broke. (T▽T) Enjoy!`,
-    { position: 'bottom-right', autoClose: true }
-  );
+//   toast.info(
+//     `Hi! I'm currently hosting the backend for this site on Heroku and AWS free tiers so you might experience some failed requests and errors from time to time due to max connection limits. Sorry for being broke. (T▽T) Enjoy!`,
+//     { position: 'bottom-right', autoClose: true }
+//   );
   if(signup){
     toast.dark('Sign up Successful');
   }
