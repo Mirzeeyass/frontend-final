@@ -52,7 +52,7 @@ const Home = () => {
             <Card.Text as ="h5">
             Coderview is an interviewing and screening web application designed
              to let candidates write codes that interviewer can dry run along
-              with live video conference between interviewer and candidate. No sign-ups, just create a room and share the URL.  
+              with live video conference between interviewer and candidate. Just login and start hiring.  
 {/* 
               Coderview is a home made solution and personal
               self-learning project for online coding interviews by Abdullah Mirza{' '} */}
