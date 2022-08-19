@@ -24,6 +24,10 @@ import { setupSync } from '@/sync-manager';
 
 import './room.css';
 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const name = urlParams.get('name');
+
 function isMicOn() {
   return window?.sync.streamData?.audio?.enabled;
 }
@@ -34,7 +38,7 @@ function isCamOn() {
 
 function displayWelcomeToast(name) {
   toast.dark(
-    `Welcome to Abdullah's Coderview, ${name}! Share this room's URL to let others join in.`
+    `Welcome to CodeInterview, ${name}! Share this room's URL to let others join in.`
   );
 }
 
@@ -56,7 +60,7 @@ class Room extends React.Component {
       syncSetup: false,
       profile: {},
       profiles: [],
-      logs: [{ content: 'Welcome to Coderview!' }],
+      logs: [{ content: 'Welcome to CodeInterview!' }],
     };
   }
 
@@ -86,7 +90,7 @@ class Room extends React.Component {
         body: `Let's get you a name.`,
         prompt: Dialog.TextPrompt({
           placeholder: 'e.g Ahmed',
-          initialValue: '',
+          initialValue: name,
           required: true,
         }),
         actions: [
