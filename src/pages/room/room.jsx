@@ -38,7 +38,7 @@ function isCamOn() {
 
 function displayWelcomeToast(name) {
   toast.dark(
-    `Welcome to CodeInterview, ${name}! Share this room's URL to let others join in.`
+    `Welcome to abdullah's Coderview, ${name}! Share this room's URL to let others join in.`
   );
 }
 
@@ -60,7 +60,7 @@ class Room extends React.Component {
       syncSetup: false,
       profile: {},
       profiles: [],
-      logs: [{ content: 'Welcome to CodeInterview!' }],
+      logs: [{ content: 'Welcome to Coderview!' }],
     };
   }
 
