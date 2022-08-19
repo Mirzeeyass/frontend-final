@@ -12,6 +12,12 @@ import DemoImage from 'assets/images/demo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './home.css';
 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const login = urlParams.get('login');
+const signup = urlParams.get('signup');
+const name = urlParams.get('name');
+
 const Home = () => {
   const roomService = getRoomService();
   let clicked = false;
@@ -19,6 +25,24 @@ const Home = () => {
     `Hi! I'm currently hosting the backend for this site on Heroku and AWS free tiers so you might experience some failed requests and errors from time to time due to max connection limits. Sorry for being broke. (T▽T) Enjoy!`,
     { position: 'bottom-right', autoClose: true }
   );
+  if(signup){
+    toast.dark('Sign up Successful');
+  }
+  if(login){
+    toast.dark('Creating new room...');
+            roomService
+              .createNewRoom()
+              .then(room => {
+                toast.dark('Redirecting...');
+                window.location.href = `/room/${room.data.room_id}?name=`+name;
+              })
+              .catch(err => {
+                toast.error(
+                  `Failed to create new room: ${err.message}`
+                );
+                clicked = false;
+              });
+  }
   return (
     <Container fluid className="p-4 wrapper text-center">
       <Row className="d-flex flex-column justify-content-center">
@@ -52,33 +76,22 @@ const Home = () => {
           variant="primary"
           href="#"
           onClick={() => {
-            if (clicked) return;
-            clicked = true;
-            toast.dark('Creating new room...');
-            roomService
-              .createNewRoom()
-              .then(room => {
-                toast.dark('Redirecting...');
-                window.location.href = `/room/${room.data.room_id}`;
-              })
-              .catch(err => {
-                toast.error(
-                  `Failed to create new room: ${err.message}`
-                );
-                clicked = false;
-              });
+              window.location.href = "https://coderview-mysql.herokuapp.com/";
           }}
         >
-          Start Hiring
+          Login
          </Button>
-        { <Button
-          className="align-self-center p-2"
+         <Button
+          className="align-self-center mb-4 p-2"
           size="sm"
-          variant="light"
-          target="_blank"
+          variant="primary"
+          href="#"
+          onClick={() => {
+              window.location.href = "https://coderview-mysql.herokuapp.com/sign_up.php";
+          }}
         >
-         Sign-up & Code
-        </Button> } 
+          Sign Up
+         </Button>
       </Row>
       <Card className="p-4 align-self-left mt-4 text-left End-card">
           <Card.Body>
