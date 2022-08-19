@@ -55,7 +55,7 @@ $title-bar-height: 30px; */
 
 
 
-/* .video-chat-window.compressed {
+ .video-chat-window.compressed {
   max-height: var(--compressed-window-height);
   max-width: var(--compressed-window-width);
   left: 100%;
@@ -81,4 +81,4 @@ $title-bar-height: 30px; */
       height: 0px !important;
     }
   }
-} */
+} 
