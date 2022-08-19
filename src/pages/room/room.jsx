@@ -87,7 +87,7 @@ class Room extends React.Component {
     // ask for username
     if (!username) {
       this.dialog.show({
-        body: `Let's get you a name.`,
+        body: `Continue with this name.`,
         prompt: Dialog.TextPrompt({
           placeholder: 'e.g Ahmed',
           initialValue: name,
