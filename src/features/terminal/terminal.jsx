@@ -94,7 +94,7 @@ const Terminal = ({
             <span className="tab active">{name}</span>
           </div>
         </Row>
-        <div className="xterm-container" ref={xtermRef} />
+//         <div className="xterm-container" ref={xtermRef} />
         <input
           ref={inputRef}
           className="terminal-input"
