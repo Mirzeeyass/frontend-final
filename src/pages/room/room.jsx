@@ -250,15 +250,15 @@ class Room extends React.Component {
             <Col>
               <ControlBar>
                 <Row className="align-items-center">
-//                   <Col md={2}>
-// //                     <Button
-// //                       onClick={this.handleRunBtn}
-// //                       variant="success"
-// //                       size="sm"
-// //                     >
-// //                       Run
-// //                     </Button>
-//                   </Col>
+                  <Col md={2}>
+                    <Button
+                      onClick={this.handleRunBtn}
+                      variant="success"
+                      size="sm"
+                    >
+//                       Run
+                    </Button>
+                  </Col>
                   <Col md={6}>
                     <OverlayScrollbarsComponent
                       options={{
