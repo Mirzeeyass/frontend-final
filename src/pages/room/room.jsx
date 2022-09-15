@@ -45,7 +45,7 @@ componentDidMount(){
   document.addEventListener('contextmenu', (e) => {
     e.preventDefault();
   });
-};
+}
 
 class Room extends React.Component {
   constructor(props) {
