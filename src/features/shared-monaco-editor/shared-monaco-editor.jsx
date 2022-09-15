@@ -240,17 +240,16 @@ class SharedMonacoEditor extends React.Component {
 
 SharedMonacoEditor.defaultProps = {
   language: 'python',
-  monaco.editor.updateOptions({ contextmenu: false });
   sharedEditorDidMount: () => null,
   loadTemplate: true,
   className: '',
   showDropdown: false,
   globalSettings: {},
 };
+monaco.editor.updateOptions({ contextmenu: false });
 
 SharedMonacoEditor.propTypes = {
   language: PropTypes.string,
-  monaco.editor.updateOptions({ contextmenu: false });
   sharedEditorDidMount: PropTypes.func,
   loadTemplate: PropTypes.bool,
   className: PropTypes.string,
