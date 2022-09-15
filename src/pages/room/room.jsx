@@ -41,9 +41,6 @@ function displayWelcomeToast(name) {
     `Welcome to abdullah's Coderview, ${name}! Share this room's URL to let others join in.`
   );
 }
-document.addEventListener('contextmenu', (e) => {
-    e.preventDefault();
-  });
 
 class Room extends React.Component {
   constructor(props) {
@@ -68,6 +65,9 @@ class Room extends React.Component {
   }
 
   async componentDidMount() {
+    document.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+    });
     const { props } = this;
     const { roomId } = props.match.params;
     try {
