@@ -246,7 +246,6 @@ SharedMonacoEditor.defaultProps = {
   showDropdown: false,
   globalSettings: {},
 };
-monaco.editor.updateOptions({ contextmenu: false });
 
 SharedMonacoEditor.propTypes = {
   language: PropTypes.string,
