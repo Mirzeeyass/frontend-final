@@ -237,6 +237,9 @@ class SharedMonacoEditor extends React.Component {
     );
   }
 }
+document.getElementsByClassName("shared-editor-container")[0].addEventListener('contextmenu',(e) => {
+  e.preventDefault();
+})
 
 SharedMonacoEditor.defaultProps = {
   language: 'python',
