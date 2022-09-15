@@ -176,6 +176,7 @@ class SharedMonacoEditor extends React.Component {
     const editorOptions = {
       ...defaultConfig,
       theme: globalSettings.theme,
+      contextmenu: false,
     };
     const editorLanguages = Object.keys(LANG_CONFIG);
     editorLanguages.sort();
@@ -237,9 +238,6 @@ class SharedMonacoEditor extends React.Component {
     );
   }
 }
-document.getElementsByClassName("shared-editor-container")[0].addEventListener('contextmenu',(e) => {
-  e.preventDefault();
-})
 
 SharedMonacoEditor.defaultProps = {
   language: 'python',
