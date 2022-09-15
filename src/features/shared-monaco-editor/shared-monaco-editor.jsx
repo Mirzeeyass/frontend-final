@@ -142,6 +142,7 @@ class SharedMonacoEditor extends React.Component {
         this.setState({
           language: newLang,
           loadTemplate: false,
+          contextmenu:false,
         });
       }
     });
