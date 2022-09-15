@@ -117,7 +117,6 @@ class SharedMonacoEditor extends React.Component {
     const yInput = doc.getText('input');
     this.data.code.model = monaco.editor.createModel('code');
     this.data.input.model = monaco.editor.createModel('input');
-    this.data.code.model.updateOptions({ contextmenu: false });
     this.data.code.binding = new MonacoBinding(
       yCode,
       this.data.code.model,
@@ -241,6 +240,7 @@ class SharedMonacoEditor extends React.Component {
 
 SharedMonacoEditor.defaultProps = {
   language: 'python',
+  contextmenu: false,
   sharedEditorDidMount: () => null,
   loadTemplate: true,
   className: '',
@@ -250,6 +250,7 @@ SharedMonacoEditor.defaultProps = {
 
 SharedMonacoEditor.propTypes = {
   language: PropTypes.string,
+  contextmenu: false,
   sharedEditorDidMount: PropTypes.func,
   loadTemplate: PropTypes.bool,
   className: PropTypes.string,
