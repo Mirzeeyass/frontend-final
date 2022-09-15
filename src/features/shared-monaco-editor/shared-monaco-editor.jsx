@@ -117,6 +117,7 @@ class SharedMonacoEditor extends React.Component {
     const yInput = doc.getText('input');
     this.data.code.model = monaco.editor.createModel('code');
     this.data.input.model = monaco.editor.createModel('input');
+    monaco.editor.updateOptions({ contextmenu: false });
     this.data.code.binding = new MonacoBinding(
       yCode,
       this.data.code.model,
@@ -142,7 +143,6 @@ class SharedMonacoEditor extends React.Component {
         this.setState({
           language: newLang,
           loadTemplate: false,
-          contextmenu:false,
         });
       }
     });
